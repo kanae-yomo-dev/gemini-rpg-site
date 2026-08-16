@@ -7,20 +7,35 @@
 
 :root {
   /* 色数は少なく: 紺・金・ガラスの白・差し色少々 */
-  --navy-deep: #080c19;      /* 夜空の底 */
-  --navy: #0d1327;           /* 基本背景 */
-  --navy-panel: #111936;     /* パネル背景 */
-  --gold: #c9a45c;           /* 金属線の金 */
-  --gold-dim: #8a7440;       /* 落ち着いた金 */
-  --glass: #e9e6dc;          /* ガラスの白（本文） */
-  --glass-dim: #a9a89f;      /* 補足テキスト */
-  --water: #7ea6c9;          /* 差し色: 水 */
-  --line: rgba(201, 164, 92, 0.35); /* 罫線用の薄い金 */
+  --navy-deep: #080c19;
+  /* 夜空の底 */
+  --navy: #0d1327;
+  /* 基本背景 */
+  --navy-panel: #111936;
+  /* パネル背景 */
+  --gold: #c9a45c;
+  /* 金属線の金 */
+  --gold-dim: #8a7440;
+  /* 落ち着いた金 */
+  --glass: #e9e6dc;
+  /* ガラスの白（本文） */
+  --glass-dim: #a9a89f;
+  /* 補足テキスト */
+  --water: #7ea6c9;
+  /* 差し色: 水 */
+  --line: rgba(201, 164, 92, 0.35);
+  /* 罫線用の薄い金 */
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--navy-deep);
@@ -37,16 +52,16 @@ body {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(1px 1px at 12% 22%, rgba(233,230,220,.8) 50%, transparent 51%),
-    radial-gradient(1px 1px at 28% 68%, rgba(233,230,220,.5) 50%, transparent 51%),
-    radial-gradient(1.5px 1.5px at 41% 12%, rgba(201,164,92,.7) 50%, transparent 51%),
-    radial-gradient(1px 1px at 55% 45%, rgba(233,230,220,.6) 50%, transparent 51%),
-    radial-gradient(1px 1px at 67% 81%, rgba(126,166,201,.6) 50%, transparent 51%),
-    radial-gradient(1.5px 1.5px at 74% 28%, rgba(233,230,220,.7) 50%, transparent 51%),
-    radial-gradient(1px 1px at 86% 58%, rgba(201,164,92,.5) 50%, transparent 51%),
-    radial-gradient(1px 1px at 93% 15%, rgba(233,230,220,.5) 50%, transparent 51%),
-    radial-gradient(1px 1px at 8% 88%, rgba(126,166,201,.5) 50%, transparent 51%),
-    radial-gradient(1px 1px at 48% 92%, rgba(233,230,220,.4) 50%, transparent 51%),
+    radial-gradient(1px 1px at 12% 22%, rgba(233, 230, 220, .8) 50%, transparent 51%),
+    radial-gradient(1px 1px at 28% 68%, rgba(233, 230, 220, .5) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 41% 12%, rgba(201, 164, 92, .7) 50%, transparent 51%),
+    radial-gradient(1px 1px at 55% 45%, rgba(233, 230, 220, .6) 50%, transparent 51%),
+    radial-gradient(1px 1px at 67% 81%, rgba(126, 166, 201, .6) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 74% 28%, rgba(233, 230, 220, .7) 50%, transparent 51%),
+    radial-gradient(1px 1px at 86% 58%, rgba(201, 164, 92, .5) 50%, transparent 51%),
+    radial-gradient(1px 1px at 93% 15%, rgba(233, 230, 220, .5) 50%, transparent 51%),
+    radial-gradient(1px 1px at 8% 88%, rgba(126, 166, 201, .5) 50%, transparent 51%),
+    radial-gradient(1px 1px at 48% 92%, rgba(233, 230, 220, .4) 50%, transparent 51%),
     linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-deep) 100%);
 }
 
@@ -95,7 +110,8 @@ nav a {
   transition: color 0.3s, border-color 0.3s;
 }
 
-nav a:hover, nav a.current {
+nav a:hover,
+nav a.current {
   color: var(--gold);
   border-bottom-color: var(--gold-dim);
 }
@@ -124,7 +140,9 @@ main {
   padding: 3.5rem 1.2rem 5rem;
 }
 
-section + section { margin-top: 5rem; }
+section+section {
+  margin-top: 5rem;
+}
 
 /* 見出し: 幾何学の水平線と菱形で飾る */
 h2 {
@@ -156,16 +174,21 @@ h3 {
   margin-bottom: 0.7rem;
 }
 
-p { margin-bottom: 1rem; }
+p {
+  margin-bottom: 1rem;
+}
 
-.note { color: var(--glass-dim); font-size: 0.82rem; }
+.note {
+  color: var(--glass-dim);
+  font-size: 0.82rem;
+}
 
 /* --- 幾何学枠パネル（鏡の枠モチーフ） ----------------------- */
 /* 外周の細い金線＋四隅の切り込み。中身が表情を持つ */
 .frame {
   position: relative;
   border: 1px solid var(--line);
-  background: linear-gradient(160deg, rgba(17,25,54,.92), rgba(13,19,39,.92));
+  background: linear-gradient(160deg, rgba(17, 25, 54, .92), rgba(13, 19, 39, .92));
   padding: 2rem 1.8rem;
 }
 
@@ -209,7 +232,8 @@ p { margin-bottom: 1rem; }
 /* キービジュアル敷き（クリーン版の上にHTMLでタイトルを重ねる） */
 .hero-kv {
   min-height: 78vh;
-  margin: 0 calc(50% - 50vw);          /* mainの幅制限を破って全幅に */
+  margin: 0 calc(50% - 50vw);
+  /* mainの幅制限を破って全幅に */
   padding-left: 1rem;
   padding-right: 1rem;
   background:
@@ -261,6 +285,11 @@ p { margin-bottom: 1rem; }
   margin-bottom: 2.8rem;
 }
 
+/* 文節の途中で折り返させない（改行は.nobr同士の境界でのみ発生） */
+.nobr {
+  display: inline-block;
+}
+
 .hero-meta {
   font-size: 0.8rem;
   letter-spacing: 0.2em;
@@ -274,7 +303,7 @@ p { margin-bottom: 1rem; }
   height: 62px;
   margin: 0 auto 2rem;
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  background: linear-gradient(150deg, rgba(233,230,220,.85), rgba(126,166,201,.55) 45%, rgba(13,19,39,.9));
+  background: linear-gradient(150deg, rgba(233, 230, 220, .85), rgba(126, 166, 201, .55) 45%, rgba(13, 19, 39, .9));
   box-shadow: 0 0 40px rgba(126, 166, 201, 0.45);
 }
 
@@ -301,7 +330,10 @@ p { margin-bottom: 1rem; }
   color: var(--glass-dim);
 }
 
-.btn-sub:hover { background: var(--glass-dim); color: var(--navy-deep); }
+.btn-sub:hover {
+  background: var(--glass-dim);
+  color: var(--navy-deep);
+}
 
 /* --- カードグリッド ------------------------------------------ */
 .grid {
@@ -310,7 +342,9 @@ p { margin-bottom: 1rem; }
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-.card h3 { text-align: center; }
+.card h3 {
+  text-align: center;
+}
 
 .card .kana {
   display: block;
@@ -321,7 +355,10 @@ p { margin-bottom: 1rem; }
   margin-bottom: 1.1rem;
 }
 
-.card p { font-size: 0.9rem; color: var(--glass); }
+.card p {
+  font-size: 0.9rem;
+  color: var(--glass);
+}
 
 /* キャラの一言（シナリオからの引用） */
 .card .quote {
@@ -398,14 +435,25 @@ p { margin-bottom: 1rem; }
   color: var(--gold-dim);
 }
 
-.sys-list dd { margin-left: 1.1em; font-size: 0.92rem; color: var(--glass); }
+.sys-list dd {
+  margin-left: 1.1em;
+  font-size: 0.92rem;
+  color: var(--glass);
+}
 
-.sys-list dd .note { display: block; margin-top: 0.2rem; }
+.sys-list dd .note {
+  display: block;
+  margin-top: 0.2rem;
+}
 
 /* --- ニュース ------------------------------------------------ */
-.news-item { padding: 1.6rem 1.8rem; }
+.news-item {
+  padding: 1.6rem 1.8rem;
+}
 
-.news-item + .news-item { margin-top: 1.2rem; }
+.news-item+.news-item {
+  margin-top: 1.2rem;
+}
 
 .news-item time {
   font-size: 0.78rem;
@@ -415,12 +463,19 @@ p { margin-bottom: 1rem; }
   margin-bottom: 0.4rem;
 }
 
-.news-item h3 { margin-bottom: 0.5rem; }
+.news-item h3 {
+  margin-bottom: 0.5rem;
+}
 
-.news-item p { font-size: 0.9rem; margin-bottom: 0; }
+.news-item p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
 
 /* --- リンク集（外部サービスへの導線カード） ------------------ */
-.link-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.link-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
 
 .link-card {
   display: block;
@@ -429,7 +484,9 @@ p { margin-bottom: 1rem; }
   transition: background 0.3s;
 }
 
-.link-card:hover { background: rgba(201, 164, 92, 0.10); }
+.link-card:hover {
+  background: rgba(201, 164, 92, 0.10);
+}
 
 .link-card .link-name {
   display: block;
@@ -479,7 +536,9 @@ footer {
   letter-spacing: 0.12em;
 }
 
-footer .foot-links { margin-bottom: 1rem; }
+footer .foot-links {
+  margin-bottom: 1rem;
+}
 
 footer .foot-links a {
   color: var(--glass-dim);
@@ -487,12 +546,25 @@ footer .foot-links a {
   text-decoration: none;
 }
 
-footer .foot-links a:hover { color: var(--gold); }
+footer .foot-links a:hover {
+  color: var(--gold);
+}
 
 /* --- レスポンシブ -------------------------------------------- */
 @media (max-width: 600px) {
-  .header-inner { justify-content: center; }
-  nav ul { gap: 1rem; }
-  .hero { min-height: 55vh; }
-  .frame { padding: 1.6rem 1.2rem; }
+  .header-inner {
+    justify-content: center;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  .hero {
+    min-height: 55vh;
+  }
+
+  .frame {
+    padding: 1.6rem 1.2rem;
+  }
 }
