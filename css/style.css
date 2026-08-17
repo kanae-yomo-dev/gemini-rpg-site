@@ -558,6 +558,8 @@ footer .foot-links a:hover {
 
   nav ul {
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .hero {
