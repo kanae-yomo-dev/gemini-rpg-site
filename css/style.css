@@ -242,7 +242,7 @@ p {
       rgba(8, 12, 25, 0.28) 40%,
       rgba(8, 12, 25, 0.55) 78%,
       var(--navy-deep) 100%),
-    url("../assets/main-visual.jpg") center 32% / cover no-repeat;
+    url("../assets/main-visual-20261026.jpg") center 32% / cover no-repeat;
 }
 
 .hero-kv h1,
@@ -391,6 +391,7 @@ p {
 }
 
 .portrait img {
+  background: #fff;
   width: calc(100% - 4px);
   height: calc(100% - 4px);
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
