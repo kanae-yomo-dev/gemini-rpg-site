@@ -183,6 +183,21 @@ p {
   font-size: 0.82rem;
 }
 
+.sec-lead {
+  max-width: 42em;
+  margin: 0 auto 2.2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.sec-lead p {
+  margin-bottom: 0.6rem;
+}
+
+.sec-lead p:last-child {
+  margin-bottom: 0;
+}
+
 /* --- 幾何学枠パネル（鏡の枠モチーフ） ----------------------- */
 /* 外周の細い金線＋四隅の切り込み。中身が表情を持つ */
 .frame {
