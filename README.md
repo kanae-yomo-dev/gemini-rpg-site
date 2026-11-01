@@ -8,6 +8,7 @@
 
 - **配信リポ**: kanae-yomo-dev/gemini-rpg-site（ブランチ main / root・GitHub Pages・リポ直下にCNAMEファイルあり）。配信リポにこのREADME.mdは置かない
 - **更新の流れ**: ここ（原本）を編集 → 主さんのターミナルで `cp -R ~/LifeLog/GeminiRPG/Website/ ~/gemini-rpg-site/` → push（アカウントは `gh auth switch -u kanae-yomo-dev`）
+- **アクセス解析**: GA4の測定ID `G-FMLRT0RCS9`（プロパティはハブHPと別）。全10ページの `<head>` にgtagタグを置いている。新しいページを作るときは既存ページからタグを写す
 - **DNS**（お名前.com）: `gemini` のCNAMEレコード（→ kanae-yomo-dev.github.io）＋GitHub Pagesドメイン検証用TXTレコード（`_github-pages-challenge-kanae-yomo-dev`）。**TXTは消さずに維持**
 
 ## 構成
@@ -21,11 +22,11 @@
 | `about.html` | 開発について（開発者紹介・開発動機・連絡先。ヘッダー・フッター両メニューに掲載） |
 | `en/*.html` | 英語版5ページ（日本語版と1対1対応。ヘッダーのJA⇄ENで相互リンク） |
 | `css/style.css` | 共通スタイル（全ページで共有） |
-| `assets/main-visual.jpg` | ヒーロー用キービジュアル（1920w・タイトル無しクリーン版） |
-| `assets/og-image.jpg` | OGP用（1200×630 中央クロップ） |
-| `assets/chara-*.jpg` | キャラ肖像5枚（ミズキ・ナギ・ルイ・カイリ・ペチ。600×600・透過は白合成） |
+| `assets/main-visual-20261026.jpg` | ヒーロー用キービジュアル（1920w・タイトル無しクリーン版） |
+| `assets/og-image-20261026.jpg` | OGP用（1200×630 中央クロップ） |
+| `assets/chara-*-20261026*.png`・`assets/chara-pechi.jpg` | キャラ肖像7枚。ペチ以外の6人は1254pxの正本から600×600の透過PNGへ縮小し、CSSで白背景を付ける。ペチは既存JPEG |
 
-画像の原本は `Docs/デザインシステム/assets/main-visual.png`（3696×2118）。Web用はPILで縮小したJPEG（8.4MB→260KB）。タイトルはHTML側で重ねる方式（英語版流用とSEOのため。文字入り版 `main-visual-title-ja.png` はサイトでは未使用）。
+メインビジュアルの原本は `Docs/05_アート/MainVisual_no_title_brushed_up.png`（3696×2118）。Web用は1920px幅のJPEG、OGPは1200×630へ変換する。ペチ以外の6人のノーマル表情の正本は `Docs/05_アート/characters-brushup-v2/{名前}_brushup.png`（2026-10-26 kanae指定）。ナギは同日中の再差し替えを `chara-nagi-20261026-v2.png` に反映。画像URLに日付を付け、CSSにもバージョンを付けて旧画像のキャッシュを避ける。タイトルはHTML側で重ねる方式（英語版流用とSEOのため。文字入り版 `main-visual-title-ja.png` はサイトでは未使用）。
 
 デザインは `Docs/05_アート/アート方針ブレスト_2026-08-16.md` を直輸入（紺×金の星図・幾何学枠・静謐・色数抑制）。色は `style.css` 冒頭の `:root` 変数に集約。フォントはGoogle Fonts「Shippori Mincho」（ゲーム側のフォント検討が確定したら追随を検討）。
 
@@ -54,7 +55,7 @@
 
 ## 未了・今後
 
-- [ ] カグヤ・ハヤテのビジュアル差し込み（絵が未作成＝実行計画C1・C2の顔グラ整備と連動。現在は幾何学メダリオンで代替）
+- [x] カグヤ・ハヤテのビジュアル差し込み → 2026-10-26（顔グラ完成に合わせて肖像2枚を追加。幾何学メダリオンの代替表示と「順次公開予定」の注記を削除）
 - [ ] ロゴ画像の活用検討（`Docs/デザインシステム/assets/logo-ja/en.png` あり。現在タイトルはHTML文字）
 - [x] デプロイ先の決定 → 2026-08-16公開（上記「公開・更新手順」参照）
 - [x] OGPの絶対URL化 → 2026-08-16（全8ページに og:url / og:image を設定）
