@@ -9,6 +9,7 @@
 - **配信リポ**: kanae-yomo-dev/gemini-rpg-site（ブランチ main / root・GitHub Pages・リポ直下にCNAMEファイルあり）。配信リポにこのREADME.mdは置かない
 - **更新の流れ**: ここ（原本）を編集 → 主さんのターミナルで `cp -R ~/LifeLog/GeminiRPG/Website/ ~/gemini-rpg-site/` → push（アカウントは `gh auth switch -u kanae-yomo-dev`）
 - **アクセス解析**: GA4の測定ID `G-FMLRT0RCS9`（プロパティはハブHPと別）。全10ページの `<head>` にgtagタグを置いている。新しいページを作るときは既存ページからタグを写す
+- **検索登録**: `robots.txt`・`sitemap.xml` を置いている。ページを増やしたら sitemap.xml にURLを足す。Google Search Console への登録と「インデックス登録をリクエスト」は kanae がブラウザで行う
 - **DNS**（お名前.com）: `gemini` のCNAMEレコード（→ kanae-yomo-dev.github.io）＋GitHub Pagesドメイン検証用TXTレコード（`_github-pages-challenge-kanae-yomo-dev`）。**TXTは消さずに維持**
 
 ## 構成

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gemini.yomolog.net/sitemap.xml
